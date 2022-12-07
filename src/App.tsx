@@ -7,9 +7,7 @@ import {products} from "./data/product"
 function App() {
    return (
        <div className="container mx-auto max-w-2xl pt-5">
-           hi
-           <Product product = {products[0]}/>
-           <Product product = {products[1]}/>
+           {products.map(prod => <Product product={prod} key={prod.id}/>)}
        </div>
 
    )
