@@ -3,6 +3,8 @@ import {Product} from "./components/Product";
 import {useProducts} from "./hooks/products";
 import Loader from "./components/Loader";
 import {ErrorMessage} from "./components/Error";
+import Modal from "./components/Modal";
+import CreatProductModal from "./components/CreatProductModal";
 
 
 function App() {
@@ -13,6 +15,10 @@ const {loading, error, products} = useProducts()
             {loading && <Loader/>}
             {error && <ErrorMessage error = {error}/>}
             {products.map(prod => <Product product={prod} key={prod.id}/>)}
+
+            <Modal title="Creat new product">
+                <CreatProductModal/>
+                </Modal>
         </div>
 
     )
