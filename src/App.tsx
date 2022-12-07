@@ -1,11 +1,18 @@
-import React, {createElement as e} from 'react';
+import React from 'react';
+import {Product} from "./components/Product";
+import {products} from "./data/product"
+
 
 
 function App() {
-  return e('div',{className:'container'},[
-    e('h1',{className:'fond-bold'}, 'test JSX'),
-      e('button',{className:'btn'}, 'Click me !')
-  ])
+   return (
+       <div className="container mx-auto max-w-2xl pt-5">
+           hi
+           <Product product = {products[0]}/>
+           <Product product = {products[1]}/>
+       </div>
+
+   )
 }
 
 export default App;
