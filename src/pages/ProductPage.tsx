@@ -10,7 +10,6 @@ import CreatProductModal from "../components/CreatProductModal";
 
 const ProductPage = () => {
     const {loading, error, products, addProduct} = useProducts()
-    //const [modal, setModal] = useState(false)
     const {modal, open, close} = useContext(ModalContext)
 
     const createHandler = (product:IProduct) => {
@@ -29,7 +28,7 @@ const ProductPage = () => {
             </Modal>}
 
             <button className='fixed bottom-5 rounded-full bg-red-700 text-white text-2xl px-4 py-2'
-                    onClick={() => open}
+                    onClick={open}
             >+</button>
         </div>
 
